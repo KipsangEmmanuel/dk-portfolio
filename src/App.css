@@ -1,0 +1,104 @@
+/* Variables */
+:root {
+  --bg-color: #121212;
+  --card-color: #1a1a1a;
+  --text-color: #f5f5f5;
+  --muted-color: #a1a1aa;
+  --accent-blue: #3b82f6;
+  --accent-red: #ef4444;
+  --radius: 0.625rem;
+}
+
+/* Dark mode */
+.dark {
+  --bg-color: #f5f5f5;
+  --card-color: #e5e5e5;
+  --text-color: #121212;
+  --muted-color: #555555;
+}
+
+/* Body */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: sans-serif;
+}
+
+/* ===== Components ===== */
+
+/* Inputs, Textareas */
+.input-concave {
+  background-color: var(--card-color);
+  color: var(--text-color);
+  border-radius: var(--radius);
+  padding: 0.75rem;
+  width: 100%;
+  box-shadow:
+    inset 4px 4px 8px rgba(0, 0, 0, 0.3),
+    inset -4px -4px 8px rgba(255, 255, 255, 0.05);
+  transition: all 0.3s;
+}
+
+.input-concave:focus {
+  box-shadow:
+    inset 3px 3px 6px rgba(0, 0, 0, 0.5),
+    inset -3px -3px 6px rgba(255, 255, 255, 0.1);
+}
+
+/* Buttons */
+.button-concave {
+  border-radius: var(--radius);
+  padding: 0.75rem 1.5rem;
+  color: var(--text-color);
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow:
+    inset 4px 4px 8px rgba(0, 0, 0, 0.3),
+    inset -4px -4px 8px rgba(255, 255, 255, 0.05);
+  transition: all 0.3s;
+}
+
+.button-concave:hover {
+  box-shadow:
+    inset 2px 2px 6px rgba(0, 0, 0, 0.4),
+    inset -2px -2px 6px rgba(255, 255, 255, 0.08);
+}
+
+.button-concave:active {
+  box-shadow:
+    inset -2px -2px 6px rgba(0, 0, 0, 0.4),
+    inset 2px 2px 6px rgba(255, 255, 255, 0.08);
+}
+
+/* Cards and General Concave Shadow */
+.shadow-concave {
+  border-radius: var(--radius);
+  background-color: var(--card-color);
+  box-shadow:
+    inset 6px 6px 12px rgba(0, 0, 0, 0.35),
+    inset -6px -6px 12px rgba(255, 255, 255, 0.08);
+  transition: all 0.3s;
+}
+
+.shadow-concave:hover {
+  box-shadow:
+    inset 3px 3px 10px rgba(0, 0, 0, 0.4),
+    inset -3px -3px 10px rgba(255, 255, 255, 0.1);
+}
+
+/* ===== Dark Mode Adjustments ===== */
+.dark .input-concave,
+.dark .button-concave,
+.dark .shadow-concave {
+  box-shadow:
+    inset 6px 6px 12px rgba(0, 0, 255, 0.45),
+    inset -6px -6px 12px rgba(255, 255, 255, 0.12);
+}
+
+.dark .input-concave:focus,
+.dark .button-concave:hover,
+.dark .shadow-concave:hover {
+  box-shadow:
+    inset 3px 3px 8px rgba(0, 0, 255, 0.45),
+    inset -3px -3px 8px rgba(255, 255, 255, 0.18);
+}
